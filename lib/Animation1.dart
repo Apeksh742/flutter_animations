@@ -5,7 +5,7 @@ class Animation1 extends StatefulWidget {
   _Animation1State createState() => _Animation1State();
 }
 
-class _Animation1State extends State<Animation1> with SingleTickerProviderStateMixin {
+class _Animation1State extends State<Animation1> with TickerProviderStateMixin {
 
   Animation animation1;
   AnimationController animationController1;
@@ -17,7 +17,6 @@ class _Animation1State extends State<Animation1> with SingleTickerProviderStateM
     animation1 = CurvedAnimation(parent: animationController1, curve: Curves.bounceInOut);
     animation1.addListener(() {
       setState(() {
-        print(animation1.value);
       });
     });
     animation1.addStatusListener((status) {
@@ -33,7 +32,6 @@ class _Animation1State extends State<Animation1> with SingleTickerProviderStateM
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     animationController1.dispose();
   }

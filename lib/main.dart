@@ -1,7 +1,10 @@
 import 'package:animations/ANimation2.dart';
 import 'package:animations/Animation1.dart';
+import 'package:animations/Animation3.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'Animation4.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -36,11 +39,27 @@ class HomePage extends StatelessWidget {
               return Animation1();
             }));
           }, child: Text("Animation 1"),color: Color(0xffF27516),colorBrightness: Brightness.dark,),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: RaisedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context){
+                return Animation2();
+              }));
+            }, child: Text("Animation 2"),color: Color(0xff2ECC71),colorBrightness: Brightness.dark,),
+          ),
           RaisedButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context){
-              return Animation2();
+              return Animation3();
             }));
-          }, child: Text("Animation 2"),color: Color(0xff2ECC71),colorBrightness: Brightness.dark,),
+          }, child: Text("Animation 3"),color: Color(0xffFF0066),colorBrightness: Brightness.dark,),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: RaisedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context){
+                return Animation4();
+              }));
+            }, child: Text("Animation 4"),color: Color(0xff0066FF),colorBrightness: Brightness.dark,),
+          ),
         ],
       ),
     );

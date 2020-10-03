@@ -16,7 +16,6 @@ class _Animation2State extends State<Animation2> with SingleTickerProviderStateM
     animationController2 = AnimationController(vsync: this, duration: Duration(milliseconds: 2500));
     animation2 = Tween(begin: -1.0, end: 0.0 ).animate(CurvedAnimation(parent: animationController2, curve: Curves.fastOutSlowIn));
     animation2.addStatusListener(myListener);
-
     animationController2.forward();
 
   }
@@ -39,7 +38,6 @@ class _Animation2State extends State<Animation2> with SingleTickerProviderStateM
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     animationController2.dispose();
   }
